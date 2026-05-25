@@ -288,6 +288,124 @@ Detection rules were mapped against MITRE ATT&CK techniques to simulate real-wor
 
 ---
 
+## 🛠️ Splunk Troubleshooting
+
+### ⚠️ Splunk Restart Failure
+
+The following issue occurred while restarting Splunk Enterprise:
+
+```bash
+jbanday@splunk:~$ sudo /opt/splunk/bin/splunk restart --run-as-root
+
+splunkd 4475 was not running.
+
+Stopping splunk helpers...
+still shutting down helpers...
+
+sudo: unable to execute /opt/splunk/bin/splunk: Connection reset by peer
+```
+
+---
+
+### 🔧 Troubleshooting Steps
+
+#### Step 1 — Kill Existing Splunk Processes
+
+### Command Overview
+
+### Command
+
+```bash
+sudo pkill -f splunk
+```
+
+---
+
+### Explanation
+
+- `sudo`: Runs the command as administrator.
+- `pkill`: Terminates running processes.
+- `-f`: Matches the full process name.
+- `splunk`: Targets Splunk processes.
+
+---
+
+### Summary
+
+This forcefully stops stuck Splunk services and helper processes.
+
+---
+
+#### Step 2 — Start Splunk Enterprise Again
+
+### Command Overview
+
+### Command
+
+```bash
+sudo /opt/splunk/bin/splunk start --accept-license --answer-yes --no-prompt --run-as-root
+```
+
+---
+
+### Explanation
+
+- `sudo`: Runs as administrator.
+- `/opt/splunk/bin/splunk`: Splunk executable.
+- `start`: Starts Splunk services.
+- `--accept-license`: Accepts the Splunk license agreement.
+- `--answer-yes`: Automatically answers yes to prompts.
+- `--no-prompt`: Disables interactive prompts.
+- `--run-as-root`: Runs Splunk with root privileges.
+
+---
+
+### Summary
+
+This restarts Splunk Enterprise after terminating failed or stuck Splunk processes.
+
+---
+
+### ✅ Verification Step
+
+### Command Overview
+
+### Command
+
+```bash
+sudo /opt/splunk/bin/splunk status
+```
+
+---
+
+### Explanation
+
+- `status`: Checks the current Splunk service status.
+
+---
+
+### Summary
+
+This verifies whether Splunk Enterprise is running correctly.
+
+---
+
+### 📋 Troubleshooting Notes
+
+Possible causes of this issue include:
+
+- Corrupted helper processes
+- Stuck Splunk daemon processes
+- Incomplete shutdown operations
+- Resource exhaustion
+- Unexpected service termination
+
+The issue was resolved by terminating existing Splunk processes and manually restarting Splunk Enterprise.
+
+---
+
+---
+
 ## 📊 Splunk Dashboards
 
 ### 📈 Security Monitoring Panels
