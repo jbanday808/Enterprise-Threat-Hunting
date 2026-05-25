@@ -130,13 +130,8 @@ The enterprise threat hunting platform successfully provided:
 
 ![Enterprise Threat Hunting Architecture](../screenshots/architecture/Threat%20Hunting%20Architecture.png)
 
-### Figure 1
+**Figure 1:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing endpoint telemetry collection, Splunk SIEM monitoring, malware analysis, and SOC investigation workflows.
 
-Enterprise VMware Host-Only Threat Hunting Lab architecture showing endpoint telemetry collection, Splunk SIEM monitoring, malware analysis, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -144,13 +139,8 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![TrickBot Malware Execution Flow](../screenshots/architecture/trickbot%20malware%20execution%20flow.png)
 
-### Figure 2
+**Figure 2:** TrickBot malware execution workflow showing malware execution stages, persistence behavior, telemetry collection, and enterprise incident response visibility.
 
-TrickBot malware execution workflow showing malware execution stages, persistence behavior, telemetry collection, and enterprise incident response visibility.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -189,15 +179,10 @@ The malware activity was identified through multiple security telemetry sources 
 
 ## 🖼️ Splunk Malware Detection Dashboard
 
-![Splunk Malware Detection Dashboard](../screenshots/dynamic-analysis/splunk-malware-detectio.png)
+![Splunk Malware Detection Dashboard](../screenshots/dynamic-analysis/trickbot-malware.png)
 
-### Figure 3
+**Figure 3:** Splunk Enterprise detection dashboard identifying suspicious malware activity, malicious executable paths, and Microsoft Defender malware detections.
 
-Splunk Enterprise detection dashboard identifying suspicious malware activity, malicious executable paths, and Microsoft Defender malware detections.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -215,13 +200,8 @@ The malware sample analyzed during the investigation was identified as TrickBot 
 
 ![MalwareBazaar Threat Intelligence](../screenshots/static-analysis/MalwareBazaar.png)
 
-### Figure 4
+**Figure 4:** MalwareBazaar intelligence analysis identifying the TrickBot malware family, malware hashes, and threat intelligence indicators.
 
-MalwareBazaar intelligence analysis identifying the TrickBot malware family, malware hashes, and threat intelligence indicators.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -229,13 +209,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![VirusTotal Threat Intelligence](../screenshots/static-analysis/virustotal-trickbot-analysis.png)
 
-### Figure 5
-
-VirusTotal malware intelligence analysis showing antivirus detections, suspicious indicators, and malware reputation associated with the TrickBot sample.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 5:** VirusTotal malware intelligence analysis showing antivirus detections, suspicious indicators, and malware reputation associated with the TrickBot sample.
 
 ---
 
@@ -243,13 +217,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![Windows PE Executable Analysis](../screenshots/static-analysis/sqhbjans[.exe].png)
 
-### Figure 6
-
-Static malware analysis identifying the TrickBot sample as a 32-bit Windows Portable Executable (PE32) binary.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 6:** Static malware analysis identifying the TrickBot sample as a 32-bit Windows Portable Executable (PE32) binary.
 
 ---
 
@@ -459,8 +427,7 @@ https://docs.virustotal.com/
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808
-- Medium: https://medium.com/@jamesbanday
+- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
 
 ---
 
