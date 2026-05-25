@@ -689,241 +689,193 @@ This project is intended for educational cybersecurity research and threat hunti
 
 ## 🖥️ VMware Workstation Pro
 
-VMware Workstation Pro Documentation:  
-https://docs.vmware.com/en/VMware-Workstation-Pro/index.html
+VMware Workstation Pro Documentation: https://docs.vmware.com/en/VMware-Workstation-Pro/index.html
 
-Purpose:  
-Used to create isolated virtual machines for malware analysis and threat hunting.
+Purpose: Used to create isolated virtual machines for malware analysis and threat hunting.
 
 ---
 
 ## 🪟 Windows 11 Enterprise
 
-Microsoft Windows Documentation:  
-https://learn.microsoft.com/en-us/windows/
+Microsoft Windows Documentation: https://learn.microsoft.com/en-us/windows/
 
-Purpose:  
-Used as the enterprise endpoint for malware execution and telemetry collection.
+Purpose: Used as the enterprise endpoint for malware execution and telemetry collection.
 
 ---
 
 ## 🐧 Red Hat Enterprise Linux (RHEL)
 
-RHEL Documentation:  
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/
+RHEL Documentation: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/
 
-Purpose:  
-Used as the SIEM server platform hosting Splunk Enterprise and Suricata.
+Purpose: Used as the SIEM server platform hosting Splunk Enterprise and Suricata.
 
 ---
 
 ## 📊 Splunk Enterprise
 
-Splunk Documentation:  
-https://docs.splunk.com/Documentation/Splunk
+Splunk Documentation: https://docs.splunk.com/Documentation/Splunk
 
-Purpose:  
-Used for centralized SIEM monitoring and threat hunting.
+Purpose: Used for centralized SIEM monitoring and threat hunting.
 
 ---
 
 ## 📡 Splunk Universal Forwarder
 
-Splunk Forwarder Documentation:  
-https://docs.splunk.com/Documentation/Forwarder
+Splunk Forwarder Documentation: https://docs.splunk.com/Documentation/Forwarder
 
-Purpose:  
-Used to forward Windows and Sysmon logs into Splunk Enterprise.
+Purpose: Used to forward Windows and Sysmon logs into Splunk Enterprise.
 
 ---
 
 ## 🖥️ Sysmon
 
-Sysmon Documentation:  
-https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+Sysmon Documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-Purpose:  
-Used to capture advanced endpoint telemetry and process monitoring.
+Purpose: Used to capture advanced endpoint telemetry and process monitoring.
 
 ---
 
 ## ⚔️ SwiftOnSecurity Sysmon Config
 
-GitHub Repository:  
-https://github.com/SwiftOnSecurity/sysmon-config
+GitHub Repository: https://github.com/SwiftOnSecurity/sysmon-config
 
-Purpose:  
-Provides advanced Sysmon configuration rules for malware detection.
+Purpose: Provides advanced Sysmon configuration rules for malware detection.
 
 ---
 
 ## 🛡️ Microsoft Defender
 
-Microsoft Defender Documentation:  
-https://learn.microsoft.com/en-us/microsoft-365/security/defender/
+Microsoft Defender Documentation: https://learn.microsoft.com/en-us/microsoft-365/security/defender/
 
-Purpose:  
-Used to validate malware detection and remediation procedures.
+Purpose: Used to validate malware detection and remediation procedures.
 
 ---
 
 ## ☁️ MalwareBazaar
 
-MalwareBazaar:  
-https://bazaar.abuse.ch/
+MalwareBazaar: https://bazaar.abuse.ch/
 
-Purpose:  
-Used to download malware samples for analysis.
+Purpose: Used to download malware samples for analysis.
 
 ---
 
 ## 🎯 MITRE ATT&CK
 
-MITRE ATT&CK Framework:  
-https://attack.mitre.org/
+MITRE ATT&CK Framework: https://attack.mitre.org/
 
-Purpose:  
-Used to map attacker tactics and techniques.
+Purpose: Used to map attacker tactics and techniques.
 
 ---
 
 ## 🌐 NGINX
 
-NGINX Documentation:  
-https://nginx.org/en/docs/
+NGINX Documentation: https://nginx.org/en/docs/
 
-Purpose:  
-Used as a secure reverse proxy for Splunk Enterprise.
+Purpose: Used as a secure reverse proxy for Splunk Enterprise.
 
 ---
 
 ## 🔒 Cloudflare SSL/TLS
 
-Cloudflare Documentation:  
-https://developers.cloudflare.com/ssl/
+Cloudflare Documentation: https://developers.cloudflare.com/ssl/
 
-Purpose:  
-Used to configure HTTPS encryption.
+Purpose: Used to configure HTTPS encryption.
 
 ---
 
 ## 🌐 Wireshark
 
-Wireshark Documentation:  
-https://www.wireshark.org/docs/
+Wireshark Documentation: https://www.wireshark.org/docs/
 
-Purpose:  
-Used for packet capture and network traffic analysis.
+Purpose: Used for packet capture and network traffic analysis.
 
 ---
 
 ## ⚡ PowerShell
 
-PowerShell Documentation:  
-https://learn.microsoft.com/en-us/powershell/
+PowerShell Documentation: https://learn.microsoft.com/en-us/powershell/
 
-Purpose:  
-Used for scripting, automation, and malware analysis.
+Purpose: Used for scripting, automation, and malware analysis.
 
 ---
 
 ## 💻 Visual Studio Code (VS Code)
 
-VS Code Documentation:  
-https://code.visualstudio.com/docs
+VS Code Documentation: https://code.visualstudio.com/docs
 
-Purpose:  
-Used for editing configurations, scripts, dashboards, and Markdown documentation.
+Purpose: Used for editing configurations, scripts, dashboards, and Markdown documentation.
 
 ---
 
 ## 🛡️ Suricata
 
-Suricata Documentation:  
-https://docs.suricata.io/
+Suricata Documentation: https://docs.suricata.io/
 
-Purpose:  
-Used as an IDS/IPS platform for detecting suspicious network traffic and malware communications.
+Purpose: Used as an IDS/IPS platform for detecting suspicious network traffic and malware communications.
 
 ---
 
 ## 📈 Splunk Security Essentials
 
-Splunkbase:  
-https://splunkbase.splunk.com/app/3435
+Splunkbase: https://splunkbase.splunk.com/app/3435
 
-Purpose:  
-Provides security dashboards and MITRE ATT&CK detections.
+Purpose: Provides security dashboards and MITRE ATT&CK detections.
 
 ---
 
 ## 🧬 Splunk Add-on for Sysmon
 
-Splunkbase:  
-https://splunkbase.splunk.com/app/1914/
+Splunkbase: https://splunkbase.splunk.com/app/1914/
 
-Purpose:  
-Used to normalize Sysmon logs for Splunk analysis.
+Purpose: Used to normalize Sysmon logs for Splunk analysis.
 
 ---
 
 ## 🪟 Splunk Add-on for Microsoft Windows
 
-Splunkbase:  
-https://splunkbase.splunk.com/app/742/
+Splunkbase: https://splunkbase.splunk.com/app/742/
 
-Purpose:  
-Used to ingest and parse Windows Event Logs.
+Purpose: Used to ingest and parse Windows Event Logs.
 
 ---
 
 ## 🔥 LOLBAS Project
 
-LOLBAS Documentation:  
-https://lolbas-project.github.io/
+LOLBAS Documentation: https://lolbas-project.github.io/
 
-Purpose:  
-Used for identifying Living Off the Land Binaries (LOLBins).
+Purpose: Used for identifying Living Off the Land Binaries (LOLBins).
 
 ---
 
 ## 📦 PEStudio
 
-PEStudio Documentation:  
-https://www.winitor.com/
+PEStudio Documentation: https://www.winitor.com/
 
-Purpose:  
-Used for static malware analysis.
+Purpose: Used for static malware analysis.
 
 ---
 
 ## 🧪 Detect It Easy (DIE)
 
-GitHub Repository:  
-https://github.com/horsicq/Detect-It-Easy
+GitHub Repository: https://github.com/horsicq/Detect-It-Easy
 
-Purpose:  
-Used to identify packers and malware signatures.
+Purpose: Used to identify packers and malware signatures.
 
 ---
 
 ## 🧾 YARA
 
-YARA Documentation:  
-https://yara.readthedocs.io/
+YARA Documentation: https://yara.readthedocs.io/
 
-Purpose:  
-Used to create malware detection rules.
+Purpose: Used to create malware detection rules.
 
 ---
 
 ## 📊 VirusTotal
 
-VirusTotal Documentation:  
-https://docs.virustotal.com/
+VirusTotal Documentation: https://docs.virustotal.com/
 
-Purpose:  
-Used for malware intelligence and hash reputation analysis.
+Purpose: Used for malware intelligence and hash reputation analysis.
 
 ---
 
@@ -932,9 +884,7 @@ Used for malware intelligence and hash reputation analysis.
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: [https://github.com/jbanday808](https://github.com/jbanday808/Enterprise-Threat-Hunting/edit/main/README.md)
-- Medium: https://medium.com/@jamesbanday
-
+- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
 ---
 
 # 📄 License
