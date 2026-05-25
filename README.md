@@ -388,7 +388,7 @@ sudo /opt/splunk/bin/splunk status
 
 This verifies whether Splunk Enterprise is running correctly.
 
-
+---
 
 ### 📋 Troubleshooting Notes
 
