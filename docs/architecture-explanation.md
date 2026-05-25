@@ -497,7 +497,6 @@ James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
 - GitHub: https://github.com/jbanday808](https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main)
-- Medium: https://medium.com/@jamesbanday
 
 ---
 
