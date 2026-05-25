@@ -53,10 +53,6 @@ The detection engineering workflow focuses on:
 
 Enterprise detection engineering workflow showing telemetry collection, Splunk data ingestion, detection development, threat alerting, SOC investigation, and continuous security monitoring improvement.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ## 📡 Detection Workflow Pipeline
@@ -159,10 +155,6 @@ index=sysmon EventCode=1
 
 Sysmon process creation detection query used to identify suspicious executable activity and malicious process execution.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ## 🧠 PowerShell Detection Engineering
@@ -187,10 +179,6 @@ index=sysmon powershell.exe "*EncodedCommand*"
 ### Figure 3
 
 PowerShell detection query used to identify encoded PowerShell execution and suspicious scripting behavior.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -233,10 +221,6 @@ index=sysmon EventCode=1
 
 LOLBins detection query used to identify suspicious native Windows binary abuse and malware execution techniques.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ## 🛡️ Registry Persistence Detection
@@ -262,10 +246,6 @@ index=sysmon EventCode=13
 
 Registry persistence detection query used to identify malicious autorun registry modifications and malware persistence mechanisms.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ## 🌐 Network Connection Detection
@@ -290,10 +270,6 @@ index=sysmon EventCode=3
 ### Figure 6
 
 Network connection detection query used to identify suspicious outbound malware communications and C2 traffic.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -333,10 +309,6 @@ index=suricata
 ### Figure 7
 
 Suricata IDS detection query used to identify malicious network traffic and intrusion activity.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -403,10 +375,6 @@ YARA rules are used to identify malware artifacts, suspicious strings, embedded 
 
 YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ## 🧬 Malware Detection Workflow
@@ -449,10 +417,6 @@ The malware detection workflow combines endpoint telemetry, network monitoring, 
 
 Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
 
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
-
 ---
 
 ### 🖼️ Enterprise Threat Hunting Dashboard 02
@@ -462,10 +426,6 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 ### Figure 10
 
 Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -585,7 +545,7 @@ https://lolbas-project.github.io/
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808
+- GitHub: https://github.com/jbanday808](https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main)
 - Medium: https://medium.com/@jamesbanday
 
 ---
