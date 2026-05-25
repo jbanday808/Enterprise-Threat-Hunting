@@ -91,9 +91,9 @@ The Windows 11 Enterprise VM acts as the malware execution endpoint and telemetr
 
 | Setting | Value |
 |---|---|
-| CPU | 4 vCPUs |
+| CPU | 12 vCPUs |
 | Memory | 8 GB RAM |
-| Disk | 100 GB |
+| Disk | 120 GB |
 | Network Adapter | Host-Only |
 | Hostname | Enterprise-Threat-Hunting |
 
@@ -123,7 +123,7 @@ The RHEL 10.2 VM hosts Splunk Enterprise, Suricata IDS, and enterprise monitorin
 
 | Setting | Value |
 |---|---|
-| CPU | 4 vCPUs |
+| CPU | 8 vCPUs |
 | Memory | 8 GB RAM |
 | Disk | 100 GB |
 | Network Adapter | Host-Only |
@@ -155,9 +155,9 @@ The Kali Linux VM acts as the analyst workstation used for SOC investigations, v
 
 | Setting | Value |
 |---|---|
-| CPU | 2 vCPUs |
-| Memory | 4 GB RAM |
-| Disk | 60 GB |
+| CPU | 8 vCPUs |
+| Memory |  GB RAM |
+| Disk | 200 GB |
 | Network Adapter | Host-Only |
 | Hostname | kali |
 
