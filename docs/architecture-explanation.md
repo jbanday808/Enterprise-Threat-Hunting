@@ -1,548 +1,493 @@
-# 🛡️ Enterprise Threat Hunting Platform Deployment Guide
+# 🏗️ Enterprise Threat Hunting Architecture Explanation
 
 ---
 
 ## 📖 Overview
 
-This deployment guide explains how to build and deploy the Advanced Enterprise Threat Hunting and Malware Analysis Platform using VMware Workstation Pro, Windows 11 Enterprise, Red Hat Enterprise Linux (RHEL 10.2), Splunk Enterprise, Sysmon, Microsoft Defender, Splunk Universal Forwarder, Suricata, Wireshark, VS Code, and WSL.
+This document explains the architecture, components, data flow, detection workflow, and security monitoring design of the Advanced Enterprise Threat Hunting and Malware Analysis Platform.
 
-The environment simulates a real-world Security Operations Center (SOC) by collecting endpoint telemetry, monitoring malicious activity, analyzing malware behavior, and validating incident response procedures.
+The environment simulates a real-world enterprise Security Operations Center (SOC) using VMware Workstation Pro, Windows 11 Enterprise, Red Hat Enterprise Linux (RHEL 10.2), Splunk Enterprise, Sysmon, Splunk Universal Forwarder, Suricata IDS, NGINX, Cloudflare SSL, and MITRE ATT&CK.
 
----
-
-## 🏗️ Deployment Architecture
-
-### 🖥️ Windows 11 Enterprise VM
-
-Purpose:
-
-- Malware Analysis Endpoint
-- Sysmon Telemetry Collection
-- Microsoft Defender Monitoring
-- PowerShell Threat Hunting
-- Windows Event Monitoring
+The platform is designed to safely execute malware in an isolated VMware Host-Only network while collecting telemetry, forwarding logs into Splunk Enterprise, correlating detections, monitoring threats, and supporting SOC investigations.
 
 ---
 
-### 🐧 RHEL 10.2 VM
+## 🏗️ Enterprise Threat Hunting Architecture
 
-Purpose:
+![Enterprise Threat Hunting Architecture](../screenshots/architecture/Threat%20Hunting%20Architecture.png)
 
-- Splunk Enterprise SIEM Server
-- Log Collection Platform
-- Suricata IDS Monitoring
-- Threat Correlation Engine
-- Dashboard Visualization
+### Figure 1
 
----
+Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, Cloudflare HTTPS access, and SOC dashboard visibility.
 
-### 🌐 VMware Host-Only Network
+### References
 
-Purpose:
-
-- Isolated Malware Analysis Environment
-- Prevents External Internet Exposure
-- Simulates Internal Enterprise Network
-- Allows Safe Malware Execution
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
-## 📋 Deployment Requirements
+## 🧬 TrickBot Malware Execution Flow
 
-| Requirement | Purpose |
+![TrickBot Malware Execution Flow](../screenshots/architecture/trickbot%20malware%20execution%20flow.png)
+
+### Figure 2
+
+TrickBot malware execution workflow showing process creation, persistence activity, Sysmon telemetry collection, Splunk log forwarding, and SOC threat detection workflows.
+
+### References
+
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+
+---
+
+## 🌐 VMware Host-Only Network Architecture
+
+### Network Overview
+
+The environment uses a VMware Host-Only network to isolate malware activity from the public internet while allowing communication between virtual machines.
+
+### Network Configuration
+
+| Component | Value |
 |---|---|
-| VMware Workstation Pro | Virtualization Platform |
-| Windows 11 Enterprise ISO | Malware Analysis VM |
-| RHEL 10.2 ISO | Splunk Server VM |
-| Splunk Enterprise | SIEM Platform |
-| Sysmon | Endpoint Telemetry |
-| Splunk Universal Forwarder | Log Forwarding |
-| Suricata | Intrusion Detection |
-| Wireshark | Packet Analysis |
-| VS Code | Configuration Editing |
-| WSL | Linux Development Environment |
+| Network Type | VMware Host-Only |
+| Subnet | 192.168.159.0/24 |
+| Gateway | 192.168.159.2 |
+| DHCP | 192.168.159.254 |
 
 ---
 
-## 🚀 Deployment Workflow
-
-1. Install VMware Workstation Pro
-2. Create Windows 11 Enterprise VM
-3. Create RHEL 10.2 VM
-4. Configure VMware Host-Only Network
-5. Install Splunk Enterprise
-6. Install Sysmon
-7. Install Splunk Universal Forwarder
-8. Configure Log Forwarding
-9. Install Suricata IDS
-10. Configure Splunk Dashboards
-11. Create Detection Rules
-12. Perform Malware Analysis
-13. Validate Threat Detection
-14. Document Findings
-15. Restore Clean Snapshots
-
----
-
-## 🖥️ Step 1 — Install VMware Workstation Pro
-
-### Command Overview
-
-### Command
-
-```bash
-VMware Workstation Pro Installer
-```
-
----
-
-### Explanation
-
-- VMware Workstation Pro creates isolated virtual machines.
-- Supports malware sandbox environments.
-- Allows secure SOC simulation testing.
-
----
-
-### Summary
-
-This installs the virtualization platform used for the enterprise threat hunting lab.
-
----
-
-## 🪟 Step 2 — Create Windows 11 Enterprise VM
-
-### Recommended Configuration
-
-| Setting | Value |
-|---|---|
-| CPU | 4 vCPUs |
-| Memory | 8 GB RAM |
-| Disk | 100 GB |
-| Network | Host-Only |
-| OS | Windows 11 Enterprise |
-
----
+## 🖥️ Windows 11 Enterprise Endpoint
 
 ### Purpose
 
-- Malware Analysis Endpoint
-- Sysmon Telemetry Collection
-- PowerShell Threat Hunting
-- Windows Event Monitoring
+The Windows 11 Enterprise virtual machine acts as the malware analysis endpoint and telemetry source.
 
----
+### Responsibilities
 
-## 🐧 Step 3 — Create RHEL 10.2 VM
-
-### Recommended Configuration
-
-| Setting | Value |
-|---|---|
-| CPU | 4 vCPUs |
-| Memory | 8 GB RAM |
-| Disk | 100 GB |
-| Network | Host-Only |
-| OS | RHEL 10.2 |
-
----
-
-### Purpose
-
-- Splunk Enterprise SIEM
-- Suricata IDS Monitoring
-- Dashboard Visualization
-- Threat Correlation
-
----
-
-## 🌐 Step 4 — Configure VMware Host-Only Network
-
-### Purpose
-
-- Prevents malware from reaching the internet
-- Isolates malware traffic
-- Simulates internal enterprise network
-
----
-
-### Recommended Configuration
-
-| Network Setting | Value |
-|---|---|
-| Network Type | Host-Only |
-| DHCP | Enabled |
-| Internet Access | Disabled |
-
----
-
-## 💻 Step 5 — Install VS Code
-
-### Command Overview
-
-### Command
-
-```bash
-code .
-```
-
----
-
-### Explanation
-
-- `code`: Opens Visual Studio Code.
-- `.`: Opens the current folder.
-
----
-
-### Summary
-
-This opens the enterprise threat hunting project inside VS Code.
-
----
-
-## 🐧 Step 6 — Install WSL
-
-### Command Overview
-
-### Command
-
-```powershell
-wsl --install
-```
-
----
-
-### Explanation
-
-- `wsl`: Windows Subsystem for Linux.
-- `--install`: Installs WSL and Ubuntu.
-
----
-
-### Summary
-
-This installs the Linux development environment used inside VS Code.
-
----
-
-## 📊 Step 7 — Install Splunk Enterprise
-
-### Command Overview
-
-### Command
-
-```bash
-sudo rpm -ivh splunk-*.rpm
-```
-
----
-
-### Explanation
-
-- `sudo`: Runs the command as administrator.
-- `rpm -ivh`: Installs RPM packages.
-- `splunk-*.rpm`: Splunk Enterprise installer.
-
----
-
-### Summary
-
-This installs Splunk Enterprise on the RHEL SIEM server.
-
----
-
-## ▶️ Step 8 — Start Splunk Enterprise
-
-### Command Overview
-
-### Command
-
-```bash
-sudo /opt/splunk/bin/splunk start --accept-license
-```
-
----
-
-### Explanation
-
-- `sudo`: Runs as administrator.
-- `/opt/splunk/bin/splunk`: Splunk executable.
-- `start`: Starts Splunk services.
-- `--accept-license`: Accepts the Splunk license.
-
----
-
-### Summary
-
-This starts the Splunk Enterprise SIEM platform.
-
----
-
-## 🖥️ Step 9 — Install Sysmon
-
-### Command Overview
-
-### Command
-
-```powershell
-sysmon64.exe -accepteula -i sysmonconfig-export.xml
-```
-
----
-
-### Explanation
-
-- `sysmon64.exe`: Sysmon installer.
-- `-accepteula`: Accepts Sysmon license agreement.
-- `-i`: Installs Sysmon configuration.
-- `sysmonconfig-export.xml`: Sysmon configuration file.
-
----
-
-### Summary
-
-This installs Sysmon endpoint telemetry collection.
-
----
-
-## 📡 Step 10 — Install Splunk Universal Forwarder
-
-### Purpose
-
-- Collect Windows Event Logs
-- Forward Sysmon Telemetry
-- Send Defender Alerts to Splunk
-
----
-
-## ⚙️ Step 11 — Configure Splunk Forwarding
-
-### Example inputs.conf
-
-```ini
-[WinEventLog://Application]
-disabled = 0
-index = windows
-
-[WinEventLog://Security]
-disabled = 0
-index = windows
-
-[WinEventLog://System]
-disabled = 0
-index = windows
-
-[WinEventLog://Microsoft-Windows-Sysmon/Operational]
-disabled = 0
-renderXml = true
-index = sysmon
-```
-
----
-
-## 🛡️ Step 12 — Install Suricata IDS
-
-### Command Overview
-
-### Command
-
-```bash
-sudo dnf install suricata -y
-```
-
----
-
-### Explanation
-
-- `sudo`: Runs as administrator.
-- `dnf install`: Installs software packages.
-- `suricata`: Intrusion Detection System.
-- `-y`: Automatically confirms installation.
-
----
-
-### Summary
-
-This installs Suricata IDS for network threat monitoring.
-
----
-
-## ▶️ Step 13 — Start Suricata
-
-### Command Overview
-
-### Command
-
-```bash
-sudo systemctl enable --now suricata
-```
-
----
-
-### Explanation
-
-- `systemctl`: Manages Linux services.
-- `enable`: Starts service at boot.
-- `--now`: Starts service immediately.
-- `suricata`: IDS monitoring service.
-
----
-
-### Summary
-
-This starts Suricata IDS monitoring.
-
----
-
-## 🔍 Step 14 — Verify Sysmon Events
-
-### Command Overview
-
-### Command
-
-```powershell
-Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational"
-```
-
----
-
-### Explanation
-
-- `Get-WinEvent`: Reads Windows Event Logs.
-- `-LogName`: Specifies the event log.
-- `Sysmon/Operational`: Sysmon telemetry logs.
-
----
-
-### Summary
-
-This verifies that Sysmon telemetry is working correctly.
-
----
-
-## 📊 Step 15 — Verify Splunk Data Ingestion
-
-### Example Splunk Query
-
-```spl
-index=*
-| stats count by sourcetype
-```
-
----
-
-### Purpose
-
-- Verifies data ingestion
-- Confirms log forwarding
-- Validates SIEM telemetry collection
-
----
-
-## 🧪 Step 16 — Malware Analysis Workflow
-
-### Workflow Steps
-
-1. Download malware sample from MalwareBazaar
-2. Transfer sample into isolated VM
-3. Execute malware safely
-4. Monitor Sysmon telemetry
-5. Monitor Splunk dashboards
-6. Analyze network traffic
-7. Detect persistence mechanisms
-8. Correlate activity with MITRE ATT&CK
-9. Validate detections
-10. Restore clean VM snapshot
-
----
-
-## 📊 Step 17 — Example Splunk Detection Queries
-
-### 🔍 Process Creation Monitoring
-
-```spl
-index=windows EventCode=4688
-| table _time host Account_Name New_Process_Name Command_Line Parent_Process_Name
-| sort -_time
-```
-
----
-
-### 🧠 Encoded PowerShell Detection
-
-```spl
-index=sysmon powershell.exe "*EncodedCommand*"
-| table _time host CommandLine
-```
-
----
-
-### 🌐 Suricata IDS Alerts
-
-```spl
-index=suricata
-| stats count by alert.signature src_ip dest_ip
-```
-
----
-
-## 🛡️ Security Best Practices
-
-- Use Host-Only networking
-- Never expose malware VMs to the internet
-- Use VM snapshots before malware execution
-- Never upload live malware to GitHub
-- Use sanitized screenshots only
-- Store malware hashes instead of binaries
-- Use redacted logs when publishing findings
-
----
-
-## 📁 Recommended Screenshot Collection
-
-- VMware Configuration
-- Windows 11 Setup
-- RHEL Installation
-- Splunk Dashboards
-- Sysmon Logs
 - Malware Execution
-- Suricata Alerts
-- PowerShell Activity
-- Detection Rules
-- Incident Response Workflow
+- Sysmon Telemetry Collection
+- Windows Event Logging
+- PowerShell Monitoring
+- Splunk Log Forwarding
+- Threat Detection Validation
+
+### Installed Components
+
+| Component | Purpose |
+|---|---|
+| Sysmon | Endpoint telemetry collection |
+| Splunk Universal Forwarder | Log forwarding |
+| Microsoft Defender | Malware protection |
+| PowerShell | Administrative scripting |
 
 ---
 
-## 📚 References
+## 🐧 RHEL 10.2 Splunk Enterprise SIEM
 
-### 🖥️ VMware Workstation Pro
+### Purpose
 
-https://docs.vmware.com/en/VMware-Workstation-Pro/index.html
+The RHEL 10.2 virtual machine hosts Splunk Enterprise and functions as the centralized SIEM platform.
+
+### Responsibilities
+
+- Log Aggregation
+- Security Event Correlation
+- Threat Hunting
+- Dashboard Visualization
+- Detection Engineering
+- SOC Monitoring
+- Splunk App Management
+
+### Installed Components
+
+| Component | Purpose |
+|---|---|
+| Splunk Enterprise | SIEM platform |
+| NGINX | Reverse proxy |
+| Suricata | IDS monitoring |
+| Splunk Security Essentials | Security detections |
+| Sysmon Add-on | Sysmon log parsing |
 
 ---
 
-### 📊 Splunk Enterprise
+## 🛡️ Splunk Enterprise Services
 
-https://docs.splunk.com/Documentation/Splunk
+### Splunk Web Interface
 
----
-
-### 🖥️ Sysmon
-
-https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+| Port | Purpose |
+|---|---|
+| 8000 | Splunk Web Management |
 
 ---
 
-### 🛡️ Suricata
+### Splunk Receiver
 
-https://docs.suricata.io/
+| Port | Purpose |
+|---|---|
+| 9997 | Receives forwarded logs |
 
 ---
 
-### 🎯 MITRE ATT&CK
+### Splunk Deployment Server
 
-https://attack.mitre.org/
+| Port | Purpose |
+|---|---|
+| 8089 | App and forwarder management |
+
+---
+
+## 🌐 NGINX Reverse Proxy
+
+### Purpose
+
+NGINX provides secure HTTPS access to the Splunk Enterprise web interface.
+
+### Responsibilities
+
+- HTTPS Encryption
+- Reverse Proxy Services
+- SSL/TLS Termination
+- Secure Web Access
+
+### Traffic Flow
+
+```text
+HTTPS 443 → NGINX → Splunk Web 8000
+```
+
+---
+
+## ☁️ Cloudflare DNS and SSL
+
+### Purpose
+
+Cloudflare provides DNS management and SSL/TLS certificate protection for secure Splunk access.
+
+### Responsibilities
+
+- DNS Resolution
+- SSL/TLS Encryption
+- HTTPS Security
+- Secure Analyst Access
+
+### Example DNS Configuration
+
+| Setting | Value |
+|---|---|
+| Domain | splunk.caremedix.net |
+| IP Address | 192.168.159.129 |
+
+---
+
+## 📡 Splunk Universal Forwarder
+
+### Purpose
+
+The Splunk Universal Forwarder securely forwards endpoint telemetry from Windows 11 Enterprise into Splunk Enterprise.
+
+### Forwarded Logs
+
+- Windows Security Logs
+- Windows System Logs
+- Windows Application Logs
+- Sysmon Operational Logs
+
+### Example Forwarding Port
+
+```text
+TCP 9997
+```
+
+---
+
+## 🖥️ Sysmon Endpoint Telemetry
+
+### Purpose
+
+Sysmon provides advanced endpoint visibility and security telemetry.
+
+### Collected Events
+
+| Event ID | Description |
+|---|---|
+| 1 | Process Creation |
+| 3 | Network Connections |
+| 7 | Image Loaded |
+| 11 | File Creation |
+| 12 | Registry Object Create/Delete |
+| 13 | Registry Value Set |
+| 22 | DNS Queries |
+
+---
+
+## 🛡️ Suricata IDS Monitoring
+
+### Purpose
+
+Suricata monitors network traffic for suspicious activity and malware communications.
+
+### Detection Capabilities
+
+- Command-and-Control Detection
+- Suspicious DNS Traffic
+- Network Intrusion Detection
+- Threat Intelligence Matching
+- Malware Network Activity
+
+---
+
+## 📊 Splunk Security Dashboards
+
+### Purpose
+
+Splunk dashboards provide SOC visibility into endpoint activity, malware behavior, authentication activity, and threat detections.
+
+### Dashboard Features
+
+- Threat Hunting Dashboards
+- Process Monitoring
+- MITRE ATT&CK Mapping
+- Authentication Monitoring
+- IOC Investigation
+- PowerShell Monitoring
+- LOLBins Detection
+- Suricata IDS Alerts
+
+---
+
+## 🔥 Detection Engineering Workflow
+
+### Workflow Overview
+
+1. Collect Endpoint Telemetry
+2. Forward Logs into Splunk
+3. Parse and Normalize Events
+4. Correlate Threat Indicators
+5. Detect Suspicious Activity
+6. Generate SOC Alerts
+7. Investigate Threat Activity
+8. Validate Malware Behavior
+9. Perform Incident Response
+10. Restore Clean Environment
+
+---
+
+## 🎯 MITRE ATT&CK Integration
+
+### Purpose
+
+MITRE ATT&CK techniques are used to map malware behaviors and detection logic.
+
+### Example Techniques
+
+| Technique ID | Description |
+|---|---|
+| T1059.001 | PowerShell |
+| T1055 | Process Injection |
+| T1547.001 | Registry Run Keys |
+| T1218 | Signed Binary Proxy Execution |
+| T1105 | Ingress Tool Transfer |
+
+---
+
+## 🧪 Malware Analysis Workflow
+
+### Static Analysis
+
+Static analysis investigates malware without executing the sample.
+
+### Static Analysis Activities
+
+- Hash Analysis
+- String Extraction
+- PE Header Analysis
+- YARA Scanning
+- VirusTotal Analysis
+
+---
+
+### Dynamic Analysis
+
+Dynamic analysis safely executes malware inside the isolated VMware environment.
+
+### Dynamic Analysis Activities
+
+- Process Monitoring
+- Registry Monitoring
+- Network Traffic Monitoring
+- Persistence Detection
+- PowerShell Monitoring
+- IOC Collection
+
+---
+
+## 🚨 Incident Response Workflow
+
+### SOC Investigation Process
+
+1. Alert Detection
+2. Threat Validation
+3. IOC Investigation
+4. Malware Analysis
+5. Containment
+6. Remediation
+7. Recovery
+8. Documentation
+
+---
+
+## 🔄 Malware Data Flow
+
+### Execution Flow
+
+```text
+Malware Execution → Sysmon Telemetry → Universal Forwarder → Splunk Enterprise → Detection Rules → Dashboards → SOC Investigation
+```
+
+---
+
+## 🔐 Security Controls
+
+### Security Protections
+
+- VMware Isolation
+- Host-Only Networking
+- HTTPS Encryption
+- Sysmon Monitoring
+- Suricata IDS
+- Splunk SIEM Monitoring
+- Microsoft Defender Protection
+- Threat Intelligence Correlation
+
+---
+
+## 🛠️ Splunk Troubleshooting Workflow
+
+### Splunk Restart Issue
+
+The Splunk SIEM server experienced a restart failure caused by stuck helper processes.
+
+### Troubleshooting Screenshot
+
+![Splunk Troubleshooting](../screenshots/rhel/splunkd%204475%20troubleshooting.png)
+
+### Figure 3
+
+Splunk Enterprise troubleshooting workflow showing failed restart attempts, process termination using pkill, and successful SIEM recovery procedures.
+
+### References
+
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+
+---
+
+### Troubleshooting Commands
+
+#### Command Overview
+
+### Command
+
+```bash
+sudo pkill -f splunk
+```
+
+---
+
+### Explanation
+
+- `sudo`: Runs as administrator.
+- `pkill`: Terminates running processes.
+- `-f`: Matches the full process name.
+- `splunk`: Targets Splunk processes.
+
+---
+
+### Summary
+
+This forcefully terminates stuck Splunk services and helper processes.
+
+---
+
+#### Command Overview
+
+### Command
+
+```bash
+sudo /opt/splunk/bin/splunk start --accept-license --answer-yes --no-prompt --run-as-root
+```
+
+---
+
+### Explanation
+
+- `start`: Starts Splunk services.
+- `--accept-license`: Accepts the license agreement.
+- `--answer-yes`: Automatically confirms prompts.
+- `--no-prompt`: Disables interactive prompts.
+- `--run-as-root`: Runs Splunk as root.
+
+---
+
+### Summary
+
+This restarts Splunk Enterprise after terminating failed or stuck processes.
+
+---
+
+## 📁 Architecture Components Summary
+
+| Component | Purpose |
+|---|---|
+| VMware Workstation Pro | Virtualization platform |
+| Windows 11 Enterprise | Malware analysis endpoint |
+| RHEL 10.2 | SIEM server |
+| Splunk Enterprise | Security monitoring |
+| Sysmon | Endpoint telemetry |
+| Universal Forwarder | Log forwarding |
+| Suricata | IDS monitoring |
+| NGINX | Reverse proxy |
+| Cloudflare SSL | HTTPS encryption |
+| Kali Linux | Analyst workstation |
+
+---
+
+## 🧠 Key Learning Outcomes
+
+- Built an enterprise SIEM architecture
+- Implemented Sysmon telemetry collection
+- Configured Splunk Enterprise monitoring
+- Integrated Suricata IDS monitoring
+- Performed malware analysis safely
+- Implemented MITRE ATT&CK mapping
+- Developed SOC investigation workflows
+- Practiced detection engineering
+- Investigated endpoint telemetry
+- Monitored malicious network traffic
+
+---
+
+## ⚠️ Security Notice
+
+This environment is intended for educational cybersecurity research and malware analysis purposes only.
+
+### 🚫 Do NOT Upload
+
+- Live malware samples
+- Credentials
+- Private keys
+- Sensitive logs
+- API keys
+- VM memory dumps
+
+### ✅ Safe Uploads
+
+- Sanitized screenshots
+- Redacted logs
+- YARA rules
+- Detection queries
+- Architecture diagrams
+- Threat hunting reports
 
 ---
 
@@ -551,7 +496,8 @@ https://attack.mitre.org/
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
+- GitHub: https://github.com/jbanday808
+- Medium: https://medium.com/@jamesbanday
 
 ---
 
