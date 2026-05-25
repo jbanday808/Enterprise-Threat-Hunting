@@ -6,22 +6,23 @@
 
 This document explains the dynamic malware analysis process performed inside the Enterprise Threat Hunting Platform.
 
-Dynamic malware analysis safely executes malware samples inside an isolated VMware Host-Only environment while collecting endpoint telemetry, monitoring network activity, detecting persistence mechanisms, and validating enterprise threat detections.
+Dynamic malware analysis safely executes malware samples inside an isolated VMware Host-Only environment while collecting endpoint telemetry, monitoring network activity, detecting persistence mechanisms, validating enterprise threat detections, and supporting SOC investigations.
 
 The environment uses:
 
 - VMware Workstation Pro
 - Windows 11 Enterprise
-- Sysmon
 - Splunk Enterprise
+- Sysmon
 - Splunk Universal Forwarder
 - Suricata IDS
 - Wireshark
 - Microsoft Defender
-- MITRE ATT&CK
 - PowerShell
+- YARA
+- MITRE ATT&CK
 
-to simulate real-world enterprise SOC investigations and malware analysis workflows.
+to simulate real-world enterprise SOC investigations, malware analysis workflows, detection engineering, and incident response operations.
 
 ---
 
@@ -48,11 +49,19 @@ The dynamic malware analysis workflow focuses on:
 
 ---
 
+### 🖼️ Dynamic Malware Analysis Architecture
+
+![Dynamic Malware Analysis Architecture](../screenshots/architecture/Dynamic%20Analysis%20Architecture.png)
+
+**Figure 1:** Enterprise dynamic malware analysis architecture showing malware execution, Sysmon telemetry collection, Splunk SIEM ingestion, network monitoring, detection engineering, and SOC investigation workflows.
+
+---
+
 ### 🖼️ Enterprise Threat Hunting Architecture
 
 ![Enterprise Threat Hunting Architecture](../screenshots/architecture/Threat%20Hunting%20Architecture.png)
 
-**Figure 1:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
+**Figure 2:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
 
 ---
 
@@ -60,7 +69,7 @@ The dynamic malware analysis workflow focuses on:
 
 ![TrickBot Malware Execution Flow](../screenshots/architecture/trickbot%20malware%20execution%20flow.png)
 
-**Figure 2:** TrickBot malware execution workflow showing process creation, persistence behavior, Sysmon telemetry collection, and Splunk detection monitoring.
+**Figure 3:** TrickBot malware execution workflow showing process creation, persistence behavior, Sysmon telemetry collection, and Splunk detection monitoring.
 
 ---
 
@@ -127,11 +136,7 @@ The Windows 11 Enterprise virtual machine acts as the malware execution endpoint
 
 ![Windows Enterprise Network Configuration](../screenshots/windows/windows-11-%20enterprise-network-configuration.png.png)
 
-**Figure 3:**  Windows 11 Enterprise endpoint network configuration used for Sysmon telemetry and Splunk log forwarding.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 4:** Windows 11 Enterprise endpoint network configuration used for Sysmon telemetry and Splunk log forwarding.
 
 ---
 
@@ -172,7 +177,7 @@ The malware execution workflow monitors the complete malware lifecycle from exec
 
 ![TrickBot Malware Sample](../screenshots/windows/sqhbjans[.exe].png)
 
-**Figure 4:** TrickBot malware sample executed inside the isolated Windows 11 Enterprise malware analysis environment.
+Figure 5: TrickBot malware sample executed inside the isolated Windows 11 Enterprise malware analysis environment.
 
 ---
 
@@ -216,8 +221,7 @@ index=sysmon EventCode=1
 
 ---
 
-**Figure 5:** Sysmon process creation query used to identify suspicious malware execution and malicious process activity.
-
+Figure 6: Sysmon process creation query used to identify suspicious malware execution and malicious process activity.
 
 ---
 
@@ -240,7 +244,7 @@ index=sysmon powershell.exe "*EncodedCommand*"
 
 ---
 
-**Figure 6:** PowerShell monitoring query used to identify encoded PowerShell execution and malicious scripting activity.
+Figure 7: PowerShell monitoring query used to identify encoded PowerShell execution and malicious scripting activity.
 
 ---
 
@@ -263,7 +267,11 @@ index=sysmon EventCode=13
 
 ---
 
-**Figure 7:** Registry persistence monitoring query used to identify malicious autorun registry modifications.
+**Figure 8:** Registry persistence monitoring query used to identify malicious autorun registry modifications.
+
+### References
+
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -301,7 +309,26 @@ index=sysmon EventCode=3
 
 ---
 
-**Figure 8:** Network connection query used to identify suspicious outbound malware communications and command-and-control traffic.
+**Figure 9:** Network connection query used to identify suspicious outbound malware communications and command-and-control traffic.
+
+
+---
+
+## 📊 Splunk Malware Detection Validation
+
+---
+
+## 📖 Overview
+
+Splunk Enterprise dashboards and searches validate malware detections generated during dynamic malware execution.
+
+---
+
+### 🖼️ Splunk Malware Detection Results
+
+![Splunk Malware Detection Results](../screenshots/dynamic-analysis/splunk-malware-detectio.png)
+
+**Figure 10:** Splunk Enterprise malware detection results identifying TrickBot activity, malicious executable paths, Windows Defender detections, and endpoint telemetry generated during malware execution.
 
 ---
 
@@ -337,7 +364,7 @@ index=suricata
 
 ---
 
-**Figure 9:** Suricata IDS query used to identify malicious network traffic and intrusion activity during malware execution.
+**Figure 11:** Suricata IDS query used to identify malicious network traffic and intrusion activity during malware execution.
 
 ---
 
@@ -349,8 +376,7 @@ index=suricata
 
 ![Enterprise Threat Hunting Dashboard 01](../screenshots/dashboards/enterprise-threat-hunting-dashboard-01.png)
 
-**Figure 10:** Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
-
+**Figure 12:** Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
 
 ---
 
@@ -358,7 +384,11 @@ index=suricata
 
 ![Enterprise Threat Hunting Dashboard 02](../screenshots/dashboards/enterprise-threat-hunting-dashboard_02.png)
 
-**Figure 11:** Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
+**Figure 13:** Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
+
+### References
+
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -416,8 +446,11 @@ Incident Response
 
 ![Microsoft Defender Status Verification](../screenshots/powershell/Get-MpComputerStatus.png)
 
-**Figure 12:** PowerShell verification of Microsoft Defender operational status and malware protection monitoring.
+**Figure 14:** PowerShell verification of Microsoft Defender operational status and malware protection monitoring.
 
+### References
+
+AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -435,7 +468,7 @@ YARA rules are used to identify malware artifacts and suspicious indicators gene
 
 ![TrickBot YARA Rule](../screenshots/yara/trickbot.yar.png)
 
-**Figure 13:** YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
+**Figure 15:** YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
 
 ---
 
@@ -555,8 +588,7 @@ https://www.wireshark.org/docs/
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808
-- Medium: https://medium.com/@jamesbanday
+- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
 
 ---
 
