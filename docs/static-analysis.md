@@ -249,7 +249,7 @@ VirusTotal validates malware reputation and identifies known threat intelligence
 
 ### 🖼️ VirusTotal Threat Intelligence
 
-![VirusTotal Threat Intelligence](../screenshots/static-analysis/VirusTotal%20trickb0t[.]exe.png)
+![VirusTotal Threat Intelligence](../screenshots/static-analysis/virustotal-trickbot-analysis.png)
 
 ### Figure 6
 
