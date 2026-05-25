@@ -510,7 +510,7 @@ index=suricata
 
 #### 🖼️ Kali Enterprise Network Configuration
 
-![Kali Enterprise Network Configuration](screenshots/kali/kali-enterprise-network-configuration.png)
+![Kali Enterprise Network Configuration](screenshots/kali/kali-enterprise-network-onfiguration.png)
 
 **Figure 5:** Kali Linux analyst workstation configuration used for enterprise threat hunting, validation testing, and SOC investigations.
 
@@ -530,7 +530,7 @@ index=suricata
 
 #### 🖼️ RHEL Enterprise Network Configuration
 
-![RHEL Enterprise Network Configuration](screenshots/rhel/rhel-enterprise-network-configuration.png)
+![RHEL Enterprise Network Configuration](screenshots/rhel/rhel-enterprise-network-onfiguration.png)
 
 **Figure 7:** RHEL 10.2 enterprise SIEM server network configuration hosting Splunk Enterprise and Suricata IDS.
 
