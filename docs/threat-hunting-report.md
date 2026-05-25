@@ -544,8 +544,7 @@ Used for IDS/IPS network threat detection.
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808
-- Medium: https://medium.com/@jamesbanday
+- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
 
 ---
 
