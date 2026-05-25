@@ -68,9 +68,13 @@ The project demonstrates practical enterprise cybersecurity skills including:
 
 ---
 
-## 🏗️ Architecture Diagram
+### 🏗️ Architecture Diagrams
 
-![Threat Hunting Architecture](screenshots/architecture/Threat-Hunting-Architecture.png)
+#### 🖼️ Enterprise Threat Hunting Architecture
+
+![Enterprise Threat Hunting Architecture](screenshots/architecture/Threat%20Hunting%20Architecture.png)
+
+**Figure 1:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, Cloudflare HTTPS access, and SOC dashboard visibility.
 
 ---
 
@@ -475,16 +479,6 @@ index=suricata
 ---
 
 ## 📁 Screenshots Included
-
-### 🏗️ Architecture Diagrams
-
-#### 🖼️ Enterprise Threat Hunting Architecture
-
-![Enterprise Threat Hunting Architecture](screenshots/architecture/Threat%20Hunting%20Architecture.png)
-
-**Figure 1:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, Cloudflare HTTPS access, and SOC dashboard visibility.
-
----
 
 #### 🖼️ TrickBot Malware Execution Flow
 
