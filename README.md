@@ -402,7 +402,6 @@ Possible causes of this issue include:
 
 The issue was resolved by terminating existing Splunk processes and manually restarting Splunk Enterprise.
 
----
 
 ---
 
