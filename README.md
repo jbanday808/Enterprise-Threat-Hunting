@@ -476,26 +476,161 @@ index=suricata
 
 ## 📁 Screenshots Included
 
-The repository contains screenshots for:
+### 🏗️ Architecture Diagrams
 
-- VMware Configuration
-- Windows 11 Enterprise Setup
-- RHEL 10.2 Configuration
-- Splunk Enterprise Dashboards
-- Sysmon Event Logs
-- Malware Execution
-- PowerShell Activity
-- Threat Hunting Queries
-- MITRE ATT&CK Dashboards
-- LOLBins Detection
-- Incident Response Workflow
-- Malware Containment
-- Endpoint Recovery
-- Wireshark Packet Captures
-- Registry Persistence Detection
-- Suricata IDS Alerts
-- Detection Engineering Workflows
-- VS Code Configurations
+#### 🖼️ Enterprise Threat Hunting Architecture
+
+![Enterprise Threat Hunting Architecture](screenshots/architecture/Threat%20Hunting%20Architecture.png)
+
+### Figure 1
+
+Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, Cloudflare HTTPS access, and SOC dashboard visibility.
+
+---
+
+#### 🖼️ TrickBot Malware Execution Flow
+
+![TrickBot Malware Execution Flow](screenshots/architecture/trickbot%20malware%20execution%20flow.png)
+
+### Figure 2
+
+TrickBot malware execution workflow showing process creation, persistence activity, Sysmon telemetry collection, Splunk log forwarding, and SOC threat detection workflows.
+
+---
+
+### 📊 Splunk Dashboards
+
+#### 🖼️ Enterprise Threat Hunting Dashboard 01
+
+![Enterprise Threat Hunting Dashboard 01](screenshots/dashboards/enterprise-threat-hunting-dashboard-01.png)
+
+### Figure 3
+
+Splunk Enterprise dashboard displaying threat hunting telemetry, authentication events, process activity, and security monitoring panels.
+
+---
+
+#### 🖼️ Enterprise Threat Hunting Dashboard 02
+
+![Enterprise Threat Hunting Dashboard 02](screenshots/dashboards/enterprise-threat-hunting-dashboard_02.png)
+
+### Figure 4
+
+Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and enterprise SOC visibility.
+
+---
+
+### 🐉 Kali Linux Analyst VM
+
+#### 🖼️ Kali Enterprise Network Configuration
+
+![Kali Enterprise Network Configuration](screenshots/kali/kali-enterprise-network-configuration.png)
+
+### Figure 5
+
+Kali Linux analyst workstation configuration used for enterprise threat hunting, validation testing, and SOC investigations.
+
+---
+
+### ⚡ PowerShell Monitoring
+
+#### 🖼️ Microsoft Defender Status Verification
+
+![Microsoft Defender Status Verification](screenshots/powershell/Get-MpComputerStatus.png)
+
+### Figure 6
+
+PowerShell verification of Microsoft Defender operational status and malware protection monitoring.
+
+---
+
+### 🐧 RHEL Enterprise SIEM Server
+
+#### 🖼️ RHEL Enterprise Network Configuration
+
+![RHEL Enterprise Network Configuration](screenshots/rhel/rhel-enterprise-network-configuration.png)
+
+### Figure 7
+
+RHEL 10.2 enterprise SIEM server network configuration hosting Splunk Enterprise and Suricata IDS.
+
+---
+
+#### 🖼️ Splunk Troubleshooting Workflow
+
+![Splunk Troubleshooting Workflow](screenshots/rhel/splunkd%204475%20troubleshooting.png)
+
+### Figure 8
+
+Splunk Enterprise troubleshooting workflow showing failed restart attempts, process termination, and successful SIEM recovery procedures.
+
+---
+
+### 🖥️ VMware Virtual Machines
+
+#### 🖼️ Enterprise SIEM Platform VM
+
+![Enterprise SIEM Platform VM](screenshots/vmware/Enterprise-SIEM-Platform%20VM.png)
+
+### Figure 9
+
+VMware virtual machine configuration for the enterprise Splunk SIEM platform.
+
+---
+
+#### 🖼️ Enterprise Threat Hunting VM
+
+![Enterprise Threat Hunting VM](screenshots/vmware/Enterprise-Threat-Hunting%20VM.png)
+
+### Figure 10
+
+Windows 11 Enterprise threat hunting endpoint virtual machine used for malware execution and telemetry collection.
+
+---
+
+#### 🖼️ Kali Linux Virtual Machine
+
+![Kali Linux Virtual Machine](screenshots/vmware/Kali%202026.1%20VM.png)
+
+### Figure 11
+
+Kali Linux analyst workstation virtual machine used for SOC analysis and controlled threat hunting activity.
+
+---
+
+### 🪟 Windows Malware Analysis
+
+#### 🖼️ TrickBot Malware Sample
+
+![TrickBot Malware Sample](screenshots/windows/sqhbjans[.exe].png)
+
+### Figure 12
+
+TrickBot malware sample executed inside the isolated Windows 11 Enterprise malware analysis environment.
+
+---
+
+#### 🖼️ Windows Enterprise Network Configuration
+
+![Windows Enterprise Network Configuration](screenshots/windows/windows-11-%20enterprise-network-configuration.png.png)
+
+### Figure 13
+
+Windows 11 Enterprise endpoint network configuration used for Sysmon telemetry and Splunk log forwarding.
+
+---
+
+### 🧾 YARA Detection Rules
+
+#### 🖼️ TrickBot YARA Rule
+
+![TrickBot YARA Rule](screenshots/yara/trickbot.yar.png)
+
+### Figure 14
+
+YARA detection rule used for identifying TrickBot malware artifacts and suspicious indicators.
+
+---
 
 ---
 
