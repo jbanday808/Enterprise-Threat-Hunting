@@ -49,9 +49,7 @@ The detection engineering workflow focuses on:
 
 ![Detection Engineering Workflow](../screenshots/architecture/detection-engineering-workflow.png)
 
-### Figure 1
-
-Enterprise detection engineering workflow showing telemetry collection, Splunk data ingestion, detection development, threat alerting, SOC investigation, and continuous security monitoring improvement.
+**Figure 1:** Enterprise detection engineering workflow showing telemetry collection, Splunk data ingestion, detection development, threat alerting, SOC investigation, and continuous security monitoring improvement.
 
 ---
 
@@ -151,9 +149,7 @@ index=sysmon EventCode=1
 
 ---
 
-### Figure 2
-
-Sysmon process creation detection query used to identify suspicious executable activity and malicious process execution.
+**Figure 2:** Sysmon process creation detection query used to identify suspicious executable activity and malicious process execution.
 
 ---
 
@@ -176,9 +172,7 @@ index=sysmon powershell.exe "*EncodedCommand*"
 
 ---
 
-### Figure 3
-
-PowerShell detection query used to identify encoded PowerShell execution and suspicious scripting behavior.
+**Figure 3:** PowerShell detection query used to identify encoded PowerShell execution and suspicious scripting behavior.
 
 ---
 
@@ -217,9 +211,7 @@ index=sysmon EventCode=1
 
 ---
 
-### Figure 4
-
-LOLBins detection query used to identify suspicious native Windows binary abuse and malware execution techniques.
+**Figure 4:** LOLBins detection query used to identify suspicious native Windows binary abuse and malware execution techniques.
 
 ---
 
@@ -242,9 +234,7 @@ index=sysmon EventCode=13
 
 ---
 
-### Figure 5
-
-Registry persistence detection query used to identify malicious autorun registry modifications and malware persistence mechanisms.
+**Figure 5:** Registry persistence detection query used to identify malicious autorun registry modifications and malware persistence mechanisms.
 
 ---
 
@@ -267,9 +257,7 @@ index=sysmon EventCode=3
 
 ---
 
-### Figure 6
-
-Network connection detection query used to identify suspicious outbound malware communications and C2 traffic.
+**Figure 6:** Network connection detection query used to identify suspicious outbound malware communications and C2 traffic.
 
 ---
 
@@ -306,9 +294,7 @@ index=suricata
 
 ---
 
-### Figure 7
-
-Suricata IDS detection query used to identify malicious network traffic and intrusion activity.
+**Figure 7:** Suricata IDS detection query used to identify malicious network traffic and intrusion activity.
 
 ---
 
@@ -371,9 +357,7 @@ YARA rules are used to identify malware artifacts, suspicious strings, embedded 
 
 ![TrickBot YARA Rule](../screenshots/yara/trickbot.yar.png)
 
-### Figure 8
-
-YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
+**Figure 8:** YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
 
 ---
 
@@ -413,9 +397,7 @@ The malware detection workflow combines endpoint telemetry, network monitoring, 
 
 ![Enterprise Threat Hunting Dashboard 01](../screenshots/dashboards/enterprise-threat-hunting-dashboard-01.png)
 
-### Figure 9
-
-Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
+**Figure 9:** Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
 
 ---
 
@@ -423,9 +405,7 @@ Splunk Enterprise dashboard displaying authentication monitoring, process activi
 
 ![Enterprise Threat Hunting Dashboard 02](../screenshots/dashboards/enterprise-threat-hunting-dashboard_02.png)
 
-### Figure 10
-
-Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
+**Figure 10:** Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
 
 ---
 
