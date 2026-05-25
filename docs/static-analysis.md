@@ -53,13 +53,8 @@ The static malware analysis workflow focuses on:
 
 ![Static Malware Analysis Architecture](../screenshots/architecture/Static%20Analysis%20Diagram.png)
 
-### Figure 1
+**Figure 1:** Enterprise static malware analysis architecture showing malware sample acquisition, PE analysis, YARA scanning, string extraction, VirusTotal intelligence correlation, SIEM integration, and SOC investigation workflows.
 
-Enterprise static malware analysis architecture showing malware sample acquisition, PE analysis, YARA scanning, string extraction, VirusTotal intelligence correlation, SIEM integration, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -67,13 +62,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![Enterprise Threat Hunting Architecture](../screenshots/architecture/Threat%20Hunting%20Architecture.png)
 
-### Figure 2
-
-Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 2:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
 
 ---
 
@@ -81,13 +70,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![TrickBot Malware Execution Flow](../screenshots/architecture/trickbot%20malware%20execution%20flow.png)
 
-### Figure 3
-
-TrickBot malware execution workflow showing malware lifecycle stages, telemetry collection, and SOC detection workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 3:** TrickBot malware execution workflow showing malware lifecycle stages, telemetry collection, and SOC detection workflows.
 
 ---
 
@@ -140,13 +123,7 @@ The malware sample analyzed during the investigation was a suspicious TrickBot e
 
 ![TrickBot Malware Sample](../screenshots/windows/sqhbjans[.exe].png)
 
-### Figure 4
-
-TrickBot malware sample analyzed inside the isolated Windows 11 Enterprise malware analysis environment.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 4:** TrickBot malware sample analyzed inside the isolated Windows 11 Enterprise malware analysis environment.
 
 ---
 
@@ -214,13 +191,7 @@ MalwareBazaar provides malware intelligence, file reputation analysis, malware f
 
 ![MalwareBazaar Threat Intelligence](../screenshots/static-analysis/MalwareBazaar.png)
 
-### Figure 5
-
-MalwareBazaar threat intelligence analysis showing TrickBot malware classification, detection signatures, file hashes, and malware metadata.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 5:** MalwareBazaar threat intelligence analysis showing TrickBot malware classification, detection signatures, file hashes, and malware metadata.
 
 ---
 
@@ -251,13 +222,8 @@ VirusTotal validates malware reputation and identifies known threat intelligence
 
 ![VirusTotal Threat Intelligence](../screenshots/static-analysis/virustotal-trickbot-analysis.png)
 
-### Figure 6
+**Figure 6:** VirusTotal malware intelligence analysis showing antivirus detections, suspicious indicators, and threat intelligence reputation associated with the TrickBot malware sample.
 
-VirusTotal malware intelligence analysis showing antivirus detections, suspicious indicators, and threat intelligence reputation associated with the TrickBot malware sample.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -336,15 +302,10 @@ Detect It Easy (DIE) identifies malware packers, obfuscation methods, and binary
 
 ## 🖼️ Windows PE Executable Analysis
 
-![Windows PE Executable Analysis](../screenshots/static-analysis/Windows%20PE%20Executable.png)
+![Windows PE Executable Analysis](../screenshots/static-analysis/windows-pe-executable-analysis.png)
 
-### Figure 7
+**Figure 7:** Static malware analysis identifying the TrickBot sample as a 32-bit Windows Portable Executable (PE32) binary.
 
-Static malware analysis identifying the TrickBot sample as a 32-bit Windows Portable Executable (PE32) binary.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -412,13 +373,7 @@ YARA rules are used to identify malware artifacts, suspicious strings, and malic
 
 ![TrickBot YARA Rule](../screenshots/yara/trickbot.yar.png)
 
-### Figure 8
-
-YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 8:** YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
 
 ---
 
@@ -532,13 +487,7 @@ SOC Investigation
 
 ![Enterprise Threat Hunting Dashboard 01](../screenshots/dashboards/enterprise-threat-hunting-dashboard-01.png)
 
-### Figure 9
-
-Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 9:** Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
 
 ---
 
@@ -546,13 +495,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![Enterprise Threat Hunting Dashboard 02](../screenshots/dashboards/enterprise-threat-hunting-dashboard_02.png)
 
-### Figure 10
-
-Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 10:** Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
 
 ---
 
@@ -584,13 +527,7 @@ The malware sample demonstrated characteristics commonly associated with enterpr
 
 ![Malware Persistence File Location](../screenshots/static-analysis/sqhbjans[.exe].png)
 
-### Figure 11
-
-Suspicious malware executable discovered inside the Windows roaming profile directory commonly associated with malware persistence activity.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 11:** Suspicious malware executable discovered inside the Windows roaming profile directory commonly associated with malware persistence activity.
 
 ---
 
@@ -729,9 +666,7 @@ https://lolbas-project.github.io/
 James Banday
 
 - LinkedIn: https://www.linkedin.com/in/james-allen-morta-banday-62a391128/
-- GitHub: https://github.com/jbanday808
-- Medium: https://medium.com/@jamesbanday
-
+- GitHub: https://github.com/jbanday808/Enterprise-Threat-Hunting/tree/main
 ---
 
 ## 📄 License
