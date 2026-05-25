@@ -604,7 +604,6 @@ index=suricata
 
 ---
 
----
 
 ## 🧠 Key Learning Outcomes
 
