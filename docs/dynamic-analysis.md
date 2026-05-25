@@ -52,13 +52,7 @@ The dynamic malware analysis workflow focuses on:
 
 ![Enterprise Threat Hunting Architecture](../screenshots/architecture/Threat%20Hunting%20Architecture.png)
 
-### Figure 1
-
-Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 1:** Enterprise VMware Host-Only Threat Hunting Lab architecture showing Windows 11 telemetry collection, Splunk Enterprise SIEM, Suricata IDS monitoring, and SOC investigation workflows.
 
 ---
 
@@ -66,13 +60,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![TrickBot Malware Execution Flow](../screenshots/architecture/trickbot%20malware%20execution%20flow.png)
 
-### Figure 2
-
-TrickBot malware execution workflow showing process creation, persistence behavior, Sysmon telemetry collection, and Splunk detection monitoring.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 2:** TrickBot malware execution workflow showing process creation, persistence behavior, Sysmon telemetry collection, and Splunk detection monitoring.
 
 ---
 
@@ -139,9 +127,7 @@ The Windows 11 Enterprise virtual machine acts as the malware execution endpoint
 
 ![Windows Enterprise Network Configuration](../screenshots/windows/windows-11-%20enterprise-network-configuration.png.png)
 
-### Figure 3
-
-Windows 11 Enterprise endpoint network configuration used for Sysmon telemetry and Splunk log forwarding.
+**Figure 3:**  Windows 11 Enterprise endpoint network configuration used for Sysmon telemetry and Splunk log forwarding.
 
 ### References
 
@@ -186,13 +172,7 @@ The malware execution workflow monitors the complete malware lifecycle from exec
 
 ![TrickBot Malware Sample](../screenshots/windows/sqhbjans[.exe].png)
 
-### Figure 4
-
-TrickBot malware sample executed inside the isolated Windows 11 Enterprise malware analysis environment.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 4:** TrickBot malware sample executed inside the isolated Windows 11 Enterprise malware analysis environment.
 
 ---
 
@@ -236,13 +216,8 @@ index=sysmon EventCode=1
 
 ---
 
-### Figure 5
+**Figure 5:** Sysmon process creation query used to identify suspicious malware execution and malicious process activity.
 
-Sysmon process creation query used to identify suspicious malware execution and malicious process activity.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -265,13 +240,7 @@ index=sysmon powershell.exe "*EncodedCommand*"
 
 ---
 
-### Figure 6
-
-PowerShell monitoring query used to identify encoded PowerShell execution and malicious scripting activity.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 6:** PowerShell monitoring query used to identify encoded PowerShell execution and malicious scripting activity.
 
 ---
 
@@ -294,13 +263,7 @@ index=sysmon EventCode=13
 
 ---
 
-### Figure 7
-
-Registry persistence monitoring query used to identify malicious autorun registry modifications.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 7:** Registry persistence monitoring query used to identify malicious autorun registry modifications.
 
 ---
 
@@ -338,13 +301,7 @@ index=sysmon EventCode=3
 
 ---
 
-### Figure 8
-
-Network connection query used to identify suspicious outbound malware communications and command-and-control traffic.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 8:** Network connection query used to identify suspicious outbound malware communications and command-and-control traffic.
 
 ---
 
@@ -380,13 +337,7 @@ index=suricata
 
 ---
 
-### Figure 9
-
-Suricata IDS query used to identify malicious network traffic and intrusion activity during malware execution.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 9:** Suricata IDS query used to identify malicious network traffic and intrusion activity during malware execution.
 
 ---
 
@@ -398,13 +349,8 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![Enterprise Threat Hunting Dashboard 01](../screenshots/dashboards/enterprise-threat-hunting-dashboard-01.png)
 
-### Figure 10
+**Figure 10:** Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
 
-Splunk Enterprise dashboard displaying authentication monitoring, process activity, and enterprise threat hunting telemetry.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -412,13 +358,7 @@ AWS Pricing Calculator User Guide: This guide provides detailed instructions on 
 
 ![Enterprise Threat Hunting Dashboard 02](../screenshots/dashboards/enterprise-threat-hunting-dashboard_02.png)
 
-### Figure 11
-
-Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 11:** Advanced Splunk dashboard showing MITRE ATT&CK mapping, threat detections, and SOC investigation workflows.
 
 ---
 
@@ -476,13 +416,8 @@ Incident Response
 
 ![Microsoft Defender Status Verification](../screenshots/powershell/Get-MpComputerStatus.png)
 
-### Figure 12
+**Figure 12:** PowerShell verification of Microsoft Defender operational status and malware protection monitoring.
 
-PowerShell verification of Microsoft Defender operational status and malware protection monitoring.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
 
 ---
 
@@ -500,13 +435,7 @@ YARA rules are used to identify malware artifacts and suspicious indicators gene
 
 ![TrickBot YARA Rule](../screenshots/yara/trickbot.yar.png)
 
-### Figure 13
-
-YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
-
-### References
-
-AWS Pricing Calculator User Guide: This guide provides detailed instructions on using the AWS Pricing Calculator to estimate costs for different AWS services.
+**Figure 13:** YARA detection rule used to identify TrickBot malware artifacts and suspicious indicators.
 
 ---
 
