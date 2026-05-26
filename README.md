@@ -82,81 +82,66 @@ The project demonstrates practical enterprise cybersecurity skills including:
 
 ```text
 docs/
+├── architecture-explanation.md
 ├── deployment-guide.md
+├── detection-engineering.md
+├── dynamic-analysis.md
 ├── incident-report.md
 ├── lessons-learned.md
 ├── mitigations.md
-├── malware-analysis-report.md
-├── threat-hunting-report.md
-├── architecture-explanation.md
-├── forensic-analysis.md
 ├── static-analysis.md
-├── dynamic-analysis.md
-├── soc-workflow.md
-├── detection-engineering.md
-
-splunk/
-├── dashboards/
-├── detection-rules/
-│   ├── powershell-detection.spl
-│   ├── failed-logons.spl
-│   ├── successful-logons.spl
-│   ├── process-creation-monitoring.spl
-│   ├── encoded-powershell-detection.spl
-│   ├── registry-persistence-detection.spl
-│   ├── process-injection-detection.spl
-│   ├── suspicious-services.spl
-│   ├── certutil-detection.spl
-│   ├── rundll32-detection.spl
-│   ├── mimikatz-detection.spl
-│   ├── suricata-c2-alerts.spl
-│   ├── network-connections.spl
-│   └── mitre-attack-mapping.spl
-├── saved-searches/
-├── threat-hunting-queries/
-├── alerts/
-├── reports/
-├── correlation-searches/
-
-configs/
-├── sysmon/
-├── splunk/
-├── nginx/
-├── windows/
-├── firewall/
-├── cloudflare/
-├── suricata/
+└── threat-hunting-report.md
 
 screenshots/
 ├── architecture/
+│   ├── Dynamic Analysis Diagram.png
+│   ├── Static Analysis Diagram.png
+│   ├── Threat Hunting Architecture.png
+│   ├── detection-engineering-workflow.png
+│   └── trickbot malware execution flow.png
+│
 ├── dashboards/
+│   ├── enterprise-threat-hunting-dashboard-01.png
+│   └── enterprise-threat-hunting-dashboard_02.png
+│
 ├── detections/
-├── malware-analysis/
-├── sysmon/
-├── splunk/
-├── incident-response/
-├── wireshark/
-├── powershell/
-├── suricata/
-├── vmware/
-├── windows/
-├── rhel/
-
-reports/
-├── static-analysis/
+│   └── splunk-malware-detection.png
+│
 ├── dynamic-analysis/
-├── malware-remediation/
-├── forensic-analysis/
-├── indicators-of-compromise/
-├── network-analysis/
-├── memory-analysis/
-├── incident-response/
-
-scripts/
+│   ├── quarantined-event.png
+│   ├── splunk-malware-detection.png
+│   ├── trickbot-malware.png
+│   └── vmware-snapshot-recovery.png
+│
+├── kali/
+│   └── kali-enterprise-network-configuration.png
+│
 ├── powershell/
-├── bash/
-├── splunk/
+│   └── Get-MpComputerStatus.png
+│
+├── rhel/
+│   ├── rhel-enterprise-network-configuration.png
+│   └── splunkd 4475 troubleshooting.png
+│
+├── static-analysis/
+│   ├── MalwareBazaar.png
+│   ├── sqhbjans[.exe].png
+│   └── virustotal-trickbot-analysis.png
+│
+├── vmware/
+│   ├── Enterprise-SIEM-Platform VM.png
+│   ├── Enterprise-Threat-Hunting VM.png
+│   └── Kali 2026.1 VM.png
+│
+├── windows/
+│   ├── sqhbjans[.exe].png
+│   └── windows-11- enterprise-network-configuration.png.png
+│
+└── yara/
+    └── trickbot.yar.png
 
+.gitignore
+LICENSE
 README.md
 ```
 
